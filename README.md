@@ -1,3 +1,3 @@
 # React App
 
-Link to app: https://lazarnarcis.github.io/react
+Link to app: https://lazarnarcis.github.io/random-joke-generator/
