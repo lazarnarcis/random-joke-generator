@@ -15,7 +15,10 @@ export default function App() {
             <div>
                 {
                     jokes.map(item => {
-                        return <p key={item.id}>{ randomJoke === item.id ? `${item.text}` : "" }</p>
+                        return <div key={item.id}>
+                                <h2>{ randomJoke === item.id ? item.title : "" }</h2>
+                                <p>{ randomJoke === item.id ? item.text : "" }</p>
+                            </div>
                     })
                 }
             </div>
