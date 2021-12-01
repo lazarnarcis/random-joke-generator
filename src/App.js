@@ -1,27 +1,30 @@
-import React, { useState } from "react"
-import "./style.scss"
+import React, { useState, useEffect } from "react"
+import Joke from "./Joke"
 import jokes from "./jokes.json"
+import "./style.scss"
 
 export default function App() {
     const [randomJoke, setRandomJoke] = useState(null)
     const generateJoke = () => {
         setRandomJoke(Math.floor((Math.random() * jokes.length) + 1))
     }
+    useEffect(() => {
+        console.log(`The number of the joke generated is ${randomJoke}!`)
+    }, [randomJoke])
     return (
-        <>
+        <div>
             <h1>Random Joke Generator</h1>
             <button type="button" onClick={() => generateJoke()}>Generate a new Joke</button>
             <h3>Joke here:</h3>
             <div>
                 {
-                    jokes.map(item => {
-                        return <div key={item.id}>
-                                <h2>{ randomJoke === item.id ? item.title : "" }</h2>
-                                <p>{ randomJoke === item.id ? item.text : "" }</p>
-                            </div>
+                    jokes.map((item, key) => {
+                        return <div key={key}>
+                            { randomJoke === item.id ? <Joke title={item.title} text={item.text} /> : "" }
+                        </div>
                     })
                 }
             </div>
-        </>
+        </div>
     )
 }
