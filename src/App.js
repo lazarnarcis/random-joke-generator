@@ -20,7 +20,7 @@ export default function App() {
     return (
         <div>
             <h1>Random Joke Generator</h1>
-            <button type="button" onClick={() => generateJoke()}>Generate a new Joke</button>
+            <button type="button" onClick={() => generateJoke()}>Generate Joke</button>
             <h3>Joke here:</h3>
             <div>
                 {
