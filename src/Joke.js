@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Joke({ title, text }) {
-    return (
-        <>
-            <h2>{title}</h2>
-            <p>{text}</p>
-        </>
-    )
+    const [timer, setTimer] = useState(false)
+    setTimeout(() => {
+        setTimer(true)
+    }, 300)
+    return <>
+        { timer ? <div><h2>{title}</h2><p>{text}</p></div> : "Loading..." }
+    </>
 }
