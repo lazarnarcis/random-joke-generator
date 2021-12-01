@@ -5,11 +5,17 @@ import "./style.scss"
 
 export default function App() {
     const [randomJoke, setRandomJoke] = useState(null)
+    const [currentMap, setMap] = useState([])
     const generateJoke = () => {
         setRandomJoke(Math.floor((Math.random() * jokes.length) + 1))
     }
     useEffect(() => {
         console.log(`The number of the joke generated is ${randomJoke}!`)
+        setMap(jokes.map((item, key) => {
+            return <div key={key}>
+                { randomJoke === item.id ? <Joke title={item.title} text={item.text} /> : "" }
+            </div>
+        }))
     }, [randomJoke])
     return (
         <div>
@@ -18,11 +24,7 @@ export default function App() {
             <h3>Joke here:</h3>
             <div>
                 {
-                    jokes.map((item, key) => {
-                        return <div key={key}>
-                            { randomJoke === item.id ? <Joke title={item.title} text={item.text} /> : "" }
-                        </div>
-                    })
+                    currentMap
                 }
             </div>
         </div>
