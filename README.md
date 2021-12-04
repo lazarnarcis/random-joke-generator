@@ -1,4 +1,4 @@
-# React App
+# Random Joke Generator
 
 Link to app: https://lazarnarcis.github.io/random-joke-generator/
 
