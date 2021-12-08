@@ -73,5 +73,10 @@
         "id": 15,
         "title": "What do you call a rooster staring at a pile of lettuce?",
         "text": "A chicken sees a salad."
+    },
+    {
+        "id": 16,
+        "title": "Why are skeletons so calm?",
+        "text": "Because nothing gets under their skin."
     }
 ]
