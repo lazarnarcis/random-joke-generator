@@ -18,7 +18,7 @@ export default function App() {
         }))
     }, [randomJoke])
     return (
-        <div>
+        <div className="App">
             <h1>Random Joke Generator</h1>
             <button type="button" onClick={() => generateJoke()}>Generate Joke</button>
             <h3>Joke here:</h3>

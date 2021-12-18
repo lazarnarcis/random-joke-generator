@@ -5,7 +5,7 @@ export default function Joke({ title, text }) {
     setTimeout(() => {
         setTimer(true)
     }, 300)
-    return <>
+    return <div className="theJoke">
         { timer ? <div><h2>{title}</h2><p>{text}</p></div> : "Loading..." }
-    </>
+    </div>
 }
