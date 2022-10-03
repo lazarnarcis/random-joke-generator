@@ -41,5 +41,16 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3"
+  },
+  "description": "Link to app: https://lazarnarcis.github.io/random-joke-generator/",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyberbuddy-manas/random-joke-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyberbuddy-manas/random-joke-generator/issues"
   }
 }
